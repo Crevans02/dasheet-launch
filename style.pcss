@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+
+.stripes {
+    width: 100px;
+    height: 100%;
+
+    position: relative;
+    background-color: #E88431;
+
+    transform: translateX(0) skew(-5deg);
+}
+
+.stripes:before,
+.stripes:after {
+    content: "";
+    
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    
+    transform: translateX(-100%);
+    background-color: #C53A32;
+}
+
+.stripes:after {
+    transform: translateX(100%);
+    background-color: #F4C05F;
+}
+
+@tailwind utilities;
